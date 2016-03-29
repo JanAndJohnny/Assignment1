@@ -24,7 +24,7 @@
 
 
     $.ajax({
-        url: "http://localhost:18254/api/Choices"
+        url: "http://a2b.johnnymarin.com/api/choices"
     }).done(function (data) {
         d = jQuery.parseJSON(data["choiceData"]);
         opdata = jQuery.parseJSON(data["optionData"]);
@@ -204,7 +204,7 @@
 
 
 
-<table id="ajaxTable" class=" table">
+<table id="ajaxTable" class="table">
     
 
 </table>

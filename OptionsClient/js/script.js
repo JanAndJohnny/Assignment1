@@ -9,7 +9,7 @@
         $scope.register = function () {
             console.log("REGISTER");
 
-            var url = "http://localhost:18254/api/Account/Register";
+            var url = "http://a2b.johnnymarin.com/api/Account/Register";
             var username = $("#registerUsername").val();
             var email = $("#registerEmail").val();
             var password = $("#registerPassword").val();
@@ -57,7 +57,7 @@
             console.log("LOG IN");
             var username = $("#loginUsername").val();
             var password = $("#loginPassword").val();
-            var url = "http://localhost:18254/Token";
+            var url = "http://a2b.johnnymarin.com/Token";
 
             if ( username == "" || password == "") {
                 $("#loginMessage").text("Fields are required");
@@ -94,7 +94,7 @@
         $scope.pickChoice = function () {
             console.log("CHOICE");
 
-            var url = "http://localhost:18254/api/Choices";
+            var url = "http://a2b.johnnymarin.com/api/Choices";
             var yearTermId = ($("#idForYearTerm").val());
             var studentId = $("#optionStudentId").val();
             var firstName = $("#optionFirstName").val();
@@ -167,7 +167,7 @@
 
         $scope.populateOption = function () {
             $.ajax({
-                url: "http://localhost:18254/api/Choices/registerJsonObject"
+                url: "http://a2b.johnnymarin.com/api/Choices/registerJsonObject"
             }).done(function (data) {
                 console.log("Seeding Data In Options");
                 yearTerm = jQuery.parseJSON(data["curYearTerm"]);
@@ -219,7 +219,7 @@
         }
 
         $.ajax({
-            url: "http://localhost:18254/api/Choices/registerJsonObject"
+            url: "http://a2b.johnnymarin.com/api/Choices/registerJsonObject"
         }).done(function (data) {
             validOptionsList = jQuery.parseJSON(data["validOptionsList"]);
             //listUsersUserName = jQuery.parseJSON(data["listUsersUserName"]);
